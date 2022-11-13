@@ -1,2 +1,7 @@
 ---
 # vars file for ansible-role_mssql_db
+mssql_login_user: sa
+mssql_login_password: 1234
+mssql_port: 1433
+db_name: master
+

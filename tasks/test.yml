@@ -1,0 +1,21 @@
+---
+# - name: Check DB connection
+#   community.general.mssql_script:
+#     login_user: "{{ mssql_login_user }}"
+#     login_password: "{{ mssql_login_password }}"
+#     login_host: "{{ ansible_host }}"
+#     login_port: "{{ mssql_port }}"
+#     db: "{{ db_name }}"
+#     script: "SELECT 1"
+
+- name: Create a new database with name 'jackdata'
+  hosts: mssql
+  tasks:
+    - name: create mssql db
+      community.general.mssql_db:
+        login_user: "{{ mssql_login_user }}"
+        login_password: "{{ mssql_login_password }}"
+        login_host: "{{ ansible_host }}"
+        login_port: "{{ mssql_port }}"
+        name: muralitest
+        state: present

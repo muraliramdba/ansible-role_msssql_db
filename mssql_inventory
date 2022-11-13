@@ -1,0 +1,13 @@
+[mssql]
+#localhost
+#MAASDS00605A
+
+
+[mssql:vars]
+ansible_user=sify
+ansible_password="cool@123"
+ansible_port="5986"
+ansible_connection="winrm"
+ansible_winrm_connection="basic"
+ansible_winrm_scheme=http
+ansible_winrm_server_cert_validation=ignore
